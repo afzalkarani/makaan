@@ -1,0 +1,97 @@
+[
+    {
+        "Id": 1,
+        "Name": "Gun Hill",
+        "SellRent": 2,
+        "Image": "prop-4.png",
+        "Type": "House",
+        "Price": 12000
+    },
+    {
+        "Id": 2,
+        "Name": "Macro Home",
+        "SellRent": 1,
+        "Image": "prop-5.jpg",
+        "Type": "Villa",
+        "Price": 120000
+    },
+    {
+        "Id": 3,
+        "Name": "Afham Home",
+        "SellRent": 1,
+        "Image": "prop-6.png",
+        "Type": "PentHouse",
+        "Price": 140000
+    },
+    {
+        "Id": 4,
+        "Name": "Arham Home",
+        "SellRent": 1,
+        "Type": "PentHouse",
+        "Price": 140000
+    },
+    {
+        "Id": 5,
+        "Name": "Maryam Home",
+        "SellRent": 1,
+        "Image": "prop-8.png",
+        "Type": "PentHouse",
+        "Price": 140000
+    },
+    {
+        "Id": 6,
+        "Name": "Mariya Home",
+        "SellRent": 1,
+        "Image": "prop-9.png",
+        "Type": "PentHouse",
+        "Price": 140000
+    },
+    {
+        "Id": 7,
+        "Name": "Fateen Home",
+        "SellRent": 1,
+        "Image": "prop-10.jpg",
+        "Type": "PentHouse",
+        "Price": 140000
+    },
+    {
+        "Id": 8,
+        "Name": "Aysha Home",
+        "SellRent": 1,
+        "Image": "prop-11.png",
+        "Type": "PentHouse",
+        "Price": 140000
+    },
+    {
+        "Id": 9,
+        "Name": "Asad Home",
+        "SellRent": 1,
+        "Image": "prop-12.jpg",
+        "Type": "PentHouse",
+        "Price": 140000
+    },
+    {
+        "Id": 10,
+        "Name": "Althamas Home",
+        "SellRent": 1,
+        "Image": "prop-9.png",
+        "Type": "PentHouse",
+        "Price": 140000
+    },
+    {
+        "Id": 11,
+        "Name": "Afzal Home",
+        "SellRent": 1,
+        "Image": "prop-13.png",
+        "Type": "PentHouse",
+        "Price": 140000
+    },
+    {
+        "Id": 12,
+        "Name": "Misbah Home",
+        "SellRent": 1,
+        "Image": "prop-15.jpg",
+        "Type": "PentHouse",
+        "Price": 140000
+    }
+]

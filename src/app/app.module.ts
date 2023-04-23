@@ -7,19 +7,39 @@ import { PropertyCardComponent } from './property/property-card/property-card/pr
 import { PropertyListComponent } from './property/property-list/property-list/property-list.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 
+import { HttpClientModule } from '@angular/common/http'
+import { HousingService } from './services/housing.service';
+import { AddPropertyComponent } from './property/add-property/add-property.component';
+import { RouterModule } from '@angular/router';
+import { PropertyDetailComponent } from './property/property-detail/property-detail.component';
+
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { UserLoginComponent } from './user/user-login/user-login.component';
+import { UserRegisterComponent } from './user/user-register/user-register.component'
+import { UserServiceService } from './services/user-service.service';
+import { AlertifyService } from './services/alertify.service';
 
 @NgModule({
   declarations: [
     AppComponent,
     PropertyCardComponent,
     PropertyListComponent,
-    NavBarComponent
+    NavBarComponent,
+    AddPropertyComponent,
+    PropertyDetailComponent,
+    UserLoginComponent,
+    UserRegisterComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule
+
+
   ],
-  providers: [],
+  providers: [HousingService, UserServiceService, AlertifyService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
