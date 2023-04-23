@@ -1,8 +1,8 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { HousingService } from 'src/app/services/housing.service';
-import { IProperty } from '../IProperty.interface';
 import { ActivatedRoute } from '@angular/router';
+import { IPropertyBase } from 'src/app/models/IPropertyBase';
 
 @Component({
   selector: 'app-property-list',
@@ -13,29 +13,31 @@ import { ActivatedRoute } from '@angular/router';
 
 export class PropertyListComponent implements OnInit {
   SellRent = 1;
-  properties: Array<IProperty>;
-  constructor(private housingService: HousingService,
-    private route: ActivatedRoute
-  ) { }
+  properties: IPropertyBase[];
+
+  constructor(private route: ActivatedRoute, private housingService: HousingService) { }
+
   ngOnInit(): void {
-
-    console.log(this.route);
-
     if (this.route.snapshot.url.toString()) {
-      this.SellRent = 2;
+      this.SellRent = 2; // Means we are on rent-property URL else we are on base URL
     }
-
     this.housingService.getAllProperties(this.SellRent).subscribe(
       data => {
         this.properties = data;
-        console.log(data);
-        console.log(this.route.snapshot.url.toString());
-      }, error => {
-        console.log(error)
-      }
+        const newProperty = JSON.parse(localStorage.getItem('newProp'));
 
+        if (newProperty.SellRent === this.SellRent) {
+          this.properties = [newProperty, ...this.properties];
+        }
+
+        console.log(data);
+      }, error => {
+        console.log('httperror:');
+        console.log(error);
+      }
     );
   }
+
 }
 
 

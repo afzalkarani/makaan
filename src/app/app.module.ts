@@ -18,6 +18,15 @@ import { UserLoginComponent } from './user/user-login/user-login.component';
 import { UserRegisterComponent } from './user/user-register/user-register.component'
 import { UserServiceService } from './services/user-service.service';
 import { AlertifyService } from './services/alertify.service';
+import { AuthService } from './services/auth.service';
+
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
+
+import { TabsModule } from 'ngx-bootstrap/tabs'
+import { ButtonsModule } from 'ngx-bootstrap/buttons';
+import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
 
 @NgModule({
   declarations: [
@@ -28,18 +37,25 @@ import { AlertifyService } from './services/alertify.service';
     AddPropertyComponent,
     PropertyDetailComponent,
     UserLoginComponent,
-    UserRegisterComponent
+    UserRegisterComponent,
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    ReactiveFormsModule
-
-
+    ReactiveFormsModule,
+    BrowserAnimationsModule,
+    BsDropdownModule.forRoot(),
+    TabsModule.forRoot(),
+    ButtonsModule.forRoot(),
+    BsDatepickerModule.forRoot()
   ],
-  providers: [HousingService, UserServiceService, AlertifyService],
+  providers: [HousingService,
+    UserServiceService,
+    AlertifyService,
+    AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

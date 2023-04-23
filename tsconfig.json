@@ -21,6 +21,7 @@
     "useDefineForClassFields": false,
     "strictPropertyInitialization": false,
     "suppressImplicitAnyIndexErrors": true,
+    "strictNullChecks": false,
     "typeRoots": [
       "node_modules/@types",
       "src/assets/alertifyjs.d.ts"
