@@ -30,6 +30,8 @@ import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
 import { PropertyDetailResolverService } from './property/property-detail/property-detail-resolver.service';
 
 import { NgbCarouselConfig, NgbCarouselModule } from '@ng-bootstrap/ng-bootstrap';
+import { FilterPipe } from './pipes/filter.pipe';
+import { SortPipe } from './pipes/sort.pipe';
 
 
 @NgModule({
@@ -41,7 +43,9 @@ import { NgbCarouselConfig, NgbCarouselModule } from '@ng-bootstrap/ng-bootstrap
     AddPropertyComponent,
     PropertyDetailComponent,
     UserLoginComponent,
-    UserRegisterComponent
+    UserRegisterComponent,
+    FilterPipe,
+    SortPipe
 
   ],
   imports: [
