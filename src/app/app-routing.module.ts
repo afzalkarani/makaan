@@ -6,6 +6,7 @@ import { PropertyListComponent } from './property/property-list/property-list/pr
 import { PropertyDetailComponent } from './property/property-detail/property-detail.component';
 import { UserLoginComponent } from './user/user-login/user-login.component';
 import { UserRegisterComponent } from './user/user-register/user-register.component';
+import { PropertyDetailResolverService } from './property/property-detail/property-detail-resolver.service';
 
 const routes: Routes = [
   {
@@ -18,7 +19,10 @@ const routes: Routes = [
     path: 'rent-property', component: PropertyListComponent
   },
   {
-    path: 'property-detail/:id', component: PropertyDetailComponent
+    path: 'property-detail/:id', component: PropertyDetailComponent, resolve:
+    {
+      prp: PropertyDetailResolverService
+    }
   },
   {
     path: 'user/login', component: UserLoginComponent

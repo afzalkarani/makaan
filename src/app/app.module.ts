@@ -27,6 +27,10 @@ import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { TabsModule } from 'ngx-bootstrap/tabs'
 import { ButtonsModule } from 'ngx-bootstrap/buttons';
 import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
+import { PropertyDetailResolverService } from './property/property-detail/property-detail-resolver.service';
+
+import { NgbCarouselConfig, NgbCarouselModule } from '@ng-bootstrap/ng-bootstrap';
+
 
 @NgModule({
   declarations: [
@@ -37,7 +41,7 @@ import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
     AddPropertyComponent,
     PropertyDetailComponent,
     UserLoginComponent,
-    UserRegisterComponent,
+    UserRegisterComponent
 
   ],
   imports: [
@@ -50,12 +54,16 @@ import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
     BsDropdownModule.forRoot(),
     TabsModule.forRoot(),
     ButtonsModule.forRoot(),
-    BsDatepickerModule.forRoot()
+    BsDatepickerModule.forRoot(),
+    NgbCarouselModule
   ],
   providers: [HousingService,
     UserServiceService,
     AlertifyService,
-    AuthService],
+    AuthService,
+    PropertyDetailResolverService, NgbCarouselConfig
+
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
